@@ -1,0 +1,1301 @@
+
+2020-05-03 19:43:35,966 INFO: errors [in C:\Users\johan\Desktop\starter_code\app.py:891]
+2020-05-03 19:43:36,966 INFO: errors [in C:\Users\johan\Desktop\starter_code\app.py:891]
+2020-05-03 19:43:42,046 INFO: errors [in C:\Users\johan\Desktop\starter_code\app.py:891]
+2020-05-03 19:44:23,351 INFO: errors [in C:\Users\johan\Desktop\starter_code\app.py:891]
+2020-05-03 19:44:23,531 ERROR: Exception on /venues [GET] [in c:\program files (x86)\python38-32\lib\site-packages\flask\app.py:1890]
+Traceback (most recent call last):
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1245, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\default.py", line 581, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UndefinedTable: FEHLER:  Relation 팚enue� existiert nicht
+LINE 2: FROM "Venue" GROUP BY "Venue".id, "Venue".state, "Venue".cit...
+             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\johan\Desktop\starter_code\app.py", line 175, in venues
+    areas = Venue.query.group_by(Venue.id, Venue.state, Venue.city).all()
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 3211, in all
+    return list(self)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 3367, in __iter__
+    return self._execute_and_instances(context)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 3392, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 982, in execute
+    return meth(self, multiparams, params)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\sql\elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1095, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1249, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1476, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\util\compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\util\compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1245, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\default.py", line 581, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedTable) FEHLER:  Relation 팚enue� existiert nicht
+LINE 2: FROM "Venue" GROUP BY "Venue".id, "Venue".state, "Venue".cit...
+             ^
+
+[SQL: SELECT "Venue".id AS "Venue_id", "Venue".name AS "Venue_name", "Venue".genres AS "Venue_genres", "Venue".city AS "Venue_city", "Venue".state AS "Venue_state", "Venue".address AS "Venue_address", "Venue".phone AS "Venue_phone", "Venue".image_link AS "Venue_image_link", "Venue".website AS "Venue_website", "Venue".facebook_link AS "Venue_facebook_link", "Venue".seeking_talent AS "Venue_seeking_talent", "Venue".seeking_description AS "Venue_seeking_description" 
+FROM "Venue" GROUP BY "Venue".id, "Venue".state, "Venue".city]
+(Background on this error at: http://sqlalche.me/e/f405)
+2020-05-03 19:44:29,848 ERROR: Exception on /venues [GET] [in c:\program files (x86)\python38-32\lib\site-packages\flask\app.py:1890]
+Traceback (most recent call last):
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1245, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\default.py", line 581, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UndefinedTable: FEHLER:  Relation 팚enue� existiert nicht
+LINE 2: FROM "Venue" GROUP BY "Venue".id, "Venue".state, "Venue".cit...
+             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\johan\Desktop\starter_code\app.py", line 175, in venues
+    areas = Venue.query.group_by(Venue.id, Venue.state, Venue.city).all()
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 3211, in all
+    return list(self)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 3367, in __iter__
+    return self._execute_and_instances(context)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 3392, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 982, in execute
+    return meth(self, multiparams, params)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\sql\elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1095, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1249, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1476, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\util\compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\util\compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1245, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\default.py", line 581, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedTable) FEHLER:  Relation 팚enue� existiert nicht
+LINE 2: FROM "Venue" GROUP BY "Venue".id, "Venue".state, "Venue".cit...
+             ^
+
+[SQL: SELECT "Venue".id AS "Venue_id", "Venue".name AS "Venue_name", "Venue".genres AS "Venue_genres", "Venue".city AS "Venue_city", "Venue".state AS "Venue_state", "Venue".address AS "Venue_address", "Venue".phone AS "Venue_phone", "Venue".image_link AS "Venue_image_link", "Venue".website AS "Venue_website", "Venue".facebook_link AS "Venue_facebook_link", "Venue".seeking_talent AS "Venue_seeking_talent", "Venue".seeking_description AS "Venue_seeking_description" 
+FROM "Venue" GROUP BY "Venue".id, "Venue".state, "Venue".city]
+(Background on this error at: http://sqlalche.me/e/f405)
+2020-05-03 19:44:31,450 ERROR: Exception on /artists [GET] [in c:\program files (x86)\python38-32\lib\site-packages\flask\app.py:1890]
+Traceback (most recent call last):
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1245, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\default.py", line 581, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UndefinedTable: FEHLER:  Relation 틻rtist� existiert nicht
+LINE 2: FROM "Artist"
+             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\johan\Desktop\starter_code\app.py", line 431, in artists
+    data = db.session.query(Artist).all()
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 3211, in all
+    return list(self)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 3367, in __iter__
+    return self._execute_and_instances(context)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 3392, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 982, in execute
+    return meth(self, multiparams, params)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\sql\elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1095, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1249, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1476, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\util\compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\util\compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1245, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\default.py", line 581, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedTable) FEHLER:  Relation 틻rtist� existiert nicht
+LINE 2: FROM "Artist"
+             ^
+
+[SQL: SELECT "Artist".id AS "Artist_id", "Artist".name AS "Artist_name", "Artist".city AS "Artist_city", "Artist".state AS "Artist_state", "Artist".phone AS "Artist_phone", "Artist".genres AS "Artist_genres", "Artist".image_link AS "Artist_image_link", "Artist".website_link AS "Artist_website_link", "Artist".facebook_link AS "Artist_facebook_link", "Artist".seeking_venue AS "Artist_seeking_venue", "Artist".seeking_description AS "Artist_seeking_description" 
+FROM "Artist"]
+(Background on this error at: http://sqlalche.me/e/f405)
+2020-05-03 19:44:32,615 ERROR: Exception on /shows [GET] [in c:\program files (x86)\python38-32\lib\site-packages\flask\app.py:1890]
+Traceback (most recent call last):
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\johan\Desktop\starter_code\app.py", line 781, in shows
+    shows_query = db.session.query(Show).join(Artist).join(Venue).all()
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 2263, in join
+    return self._join(
+  File "<string>", line 2, in _join
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\base.py", line 220, in generate
+    fn(self, *args[1:], **kw)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 2446, in _join
+    self._join_left_to_right(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 2470, in _join_left_to_right
+    ) = self._join_determine_implicit_left_side(left, right, onclause)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 2609, in _join_determine_implicit_left_side
+    raise sa_exc.InvalidRequestError(
+sqlalchemy.exc.InvalidRequestError: Don't know how to join to <class 'app.Artist'>; please use an ON clause to more clearly establish the left side of this join
+2020-05-03 19:44:33,805 ERROR: Exception on /venues [GET] [in c:\program files (x86)\python38-32\lib\site-packages\flask\app.py:1890]
+Traceback (most recent call last):
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1245, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\default.py", line 581, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UndefinedTable: FEHLER:  Relation 팚enue� existiert nicht
+LINE 2: FROM "Venue" GROUP BY "Venue".id, "Venue".state, "Venue".cit...
+             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\johan\Desktop\starter_code\app.py", line 175, in venues
+    areas = Venue.query.group_by(Venue.id, Venue.state, Venue.city).all()
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 3211, in all
+    return list(self)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 3367, in __iter__
+    return self._execute_and_instances(context)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 3392, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 982, in execute
+    return meth(self, multiparams, params)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\sql\elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1095, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1249, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1476, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\util\compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\util\compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1245, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\default.py", line 581, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedTable) FEHLER:  Relation 팚enue� existiert nicht
+LINE 2: FROM "Venue" GROUP BY "Venue".id, "Venue".state, "Venue".cit...
+             ^
+
+[SQL: SELECT "Venue".id AS "Venue_id", "Venue".name AS "Venue_name", "Venue".genres AS "Venue_genres", "Venue".city AS "Venue_city", "Venue".state AS "Venue_state", "Venue".address AS "Venue_address", "Venue".phone AS "Venue_phone", "Venue".image_link AS "Venue_image_link", "Venue".website AS "Venue_website", "Venue".facebook_link AS "Venue_facebook_link", "Venue".seeking_talent AS "Venue_seeking_talent", "Venue".seeking_description AS "Venue_seeking_description" 
+FROM "Venue" GROUP BY "Venue".id, "Venue".state, "Venue".city]
+(Background on this error at: http://sqlalche.me/e/f405)
+2020-05-03 19:44:34,601 ERROR: Exception on /artists [GET] [in c:\program files (x86)\python38-32\lib\site-packages\flask\app.py:1890]
+Traceback (most recent call last):
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1245, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\default.py", line 581, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UndefinedTable: FEHLER:  Relation 틻rtist� existiert nicht
+LINE 2: FROM "Artist"
+             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\johan\Desktop\starter_code\app.py", line 431, in artists
+    data = db.session.query(Artist).all()
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 3211, in all
+    return list(self)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 3367, in __iter__
+    return self._execute_and_instances(context)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 3392, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 982, in execute
+    return meth(self, multiparams, params)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\sql\elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1095, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1249, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1476, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\util\compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\util\compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1245, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\default.py", line 581, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedTable) FEHLER:  Relation 틻rtist� existiert nicht
+LINE 2: FROM "Artist"
+             ^
+
+[SQL: SELECT "Artist".id AS "Artist_id", "Artist".name AS "Artist_name", "Artist".city AS "Artist_city", "Artist".state AS "Artist_state", "Artist".phone AS "Artist_phone", "Artist".genres AS "Artist_genres", "Artist".image_link AS "Artist_image_link", "Artist".website_link AS "Artist_website_link", "Artist".facebook_link AS "Artist_facebook_link", "Artist".seeking_venue AS "Artist_seeking_venue", "Artist".seeking_description AS "Artist_seeking_description" 
+FROM "Artist"]
+(Background on this error at: http://sqlalche.me/e/f405)
+2020-05-03 19:44:35,423 ERROR: Exception on /venues [GET] [in c:\program files (x86)\python38-32\lib\site-packages\flask\app.py:1890]
+Traceback (most recent call last):
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1245, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\default.py", line 581, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UndefinedTable: FEHLER:  Relation 팚enue� existiert nicht
+LINE 2: FROM "Venue" GROUP BY "Venue".id, "Venue".state, "Venue".cit...
+             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\johan\Desktop\starter_code\app.py", line 175, in venues
+    areas = Venue.query.group_by(Venue.id, Venue.state, Venue.city).all()
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 3211, in all
+    return list(self)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 3367, in __iter__
+    return self._execute_and_instances(context)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 3392, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 982, in execute
+    return meth(self, multiparams, params)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\sql\elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1095, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1249, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1476, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\util\compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\util\compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1245, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\default.py", line 581, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedTable) FEHLER:  Relation 팚enue� existiert nicht
+LINE 2: FROM "Venue" GROUP BY "Venue".id, "Venue".state, "Venue".cit...
+             ^
+
+[SQL: SELECT "Venue".id AS "Venue_id", "Venue".name AS "Venue_name", "Venue".genres AS "Venue_genres", "Venue".city AS "Venue_city", "Venue".state AS "Venue_state", "Venue".address AS "Venue_address", "Venue".phone AS "Venue_phone", "Venue".image_link AS "Venue_image_link", "Venue".website AS "Venue_website", "Venue".facebook_link AS "Venue_facebook_link", "Venue".seeking_talent AS "Venue_seeking_talent", "Venue".seeking_description AS "Venue_seeking_description" 
+FROM "Venue" GROUP BY "Venue".id, "Venue".state, "Venue".city]
+(Background on this error at: http://sqlalche.me/e/f405)
+2020-05-03 19:44:37,422 ERROR: Exception on /venues [GET] [in c:\program files (x86)\python38-32\lib\site-packages\flask\app.py:1890]
+Traceback (most recent call last):
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1245, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\default.py", line 581, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UndefinedTable: FEHLER:  Relation 팚enue� existiert nicht
+LINE 2: FROM "Venue" GROUP BY "Venue".id, "Venue".state, "Venue".cit...
+             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\johan\Desktop\starter_code\app.py", line 175, in venues
+    areas = Venue.query.group_by(Venue.id, Venue.state, Venue.city).all()
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 3211, in all
+    return list(self)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 3367, in __iter__
+    return self._execute_and_instances(context)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 3392, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 982, in execute
+    return meth(self, multiparams, params)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\sql\elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1095, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1249, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1476, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\util\compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\util\compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1245, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\default.py", line 581, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedTable) FEHLER:  Relation 팚enue� existiert nicht
+LINE 2: FROM "Venue" GROUP BY "Venue".id, "Venue".state, "Venue".cit...
+             ^
+
+[SQL: SELECT "Venue".id AS "Venue_id", "Venue".name AS "Venue_name", "Venue".genres AS "Venue_genres", "Venue".city AS "Venue_city", "Venue".state AS "Venue_state", "Venue".address AS "Venue_address", "Venue".phone AS "Venue_phone", "Venue".image_link AS "Venue_image_link", "Venue".website AS "Venue_website", "Venue".facebook_link AS "Venue_facebook_link", "Venue".seeking_talent AS "Venue_seeking_talent", "Venue".seeking_description AS "Venue_seeking_description" 
+FROM "Venue" GROUP BY "Venue".id, "Venue".state, "Venue".city]
+(Background on this error at: http://sqlalche.me/e/f405)
+2020-05-03 19:44:39,071 ERROR: Exception on /venues [GET] [in c:\program files (x86)\python38-32\lib\site-packages\flask\app.py:1890]
+Traceback (most recent call last):
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1245, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\default.py", line 581, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UndefinedTable: FEHLER:  Relation 팚enue� existiert nicht
+LINE 2: FROM "Venue" GROUP BY "Venue".id, "Venue".state, "Venue".cit...
+             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\johan\Desktop\starter_code\app.py", line 175, in venues
+    areas = Venue.query.group_by(Venue.id, Venue.state, Venue.city).all()
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 3211, in all
+    return list(self)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 3367, in __iter__
+    return self._execute_and_instances(context)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 3392, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 982, in execute
+    return meth(self, multiparams, params)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\sql\elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1095, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1249, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1476, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\util\compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\util\compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1245, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\default.py", line 581, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedTable) FEHLER:  Relation 팚enue� existiert nicht
+LINE 2: FROM "Venue" GROUP BY "Venue".id, "Venue".state, "Venue".cit...
+             ^
+
+[SQL: SELECT "Venue".id AS "Venue_id", "Venue".name AS "Venue_name", "Venue".genres AS "Venue_genres", "Venue".city AS "Venue_city", "Venue".state AS "Venue_state", "Venue".address AS "Venue_address", "Venue".phone AS "Venue_phone", "Venue".image_link AS "Venue_image_link", "Venue".website AS "Venue_website", "Venue".facebook_link AS "Venue_facebook_link", "Venue".seeking_talent AS "Venue_seeking_talent", "Venue".seeking_description AS "Venue_seeking_description" 
+FROM "Venue" GROUP BY "Venue".id, "Venue".state, "Venue".city]
+(Background on this error at: http://sqlalche.me/e/f405)
+2020-05-03 19:44:39,734 ERROR: Exception on /venues [GET] [in c:\program files (x86)\python38-32\lib\site-packages\flask\app.py:1890]
+Traceback (most recent call last):
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1245, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\default.py", line 581, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UndefinedTable: FEHLER:  Relation 팚enue� existiert nicht
+LINE 2: FROM "Venue" GROUP BY "Venue".id, "Venue".state, "Venue".cit...
+             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\johan\Desktop\starter_code\app.py", line 175, in venues
+    areas = Venue.query.group_by(Venue.id, Venue.state, Venue.city).all()
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 3211, in all
+    return list(self)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 3367, in __iter__
+    return self._execute_and_instances(context)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 3392, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 982, in execute
+    return meth(self, multiparams, params)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\sql\elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1095, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1249, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1476, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\util\compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\util\compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1245, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\default.py", line 581, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedTable) FEHLER:  Relation 팚enue� existiert nicht
+LINE 2: FROM "Venue" GROUP BY "Venue".id, "Venue".state, "Venue".cit...
+             ^
+
+[SQL: SELECT "Venue".id AS "Venue_id", "Venue".name AS "Venue_name", "Venue".genres AS "Venue_genres", "Venue".city AS "Venue_city", "Venue".state AS "Venue_state", "Venue".address AS "Venue_address", "Venue".phone AS "Venue_phone", "Venue".image_link AS "Venue_image_link", "Venue".website AS "Venue_website", "Venue".facebook_link AS "Venue_facebook_link", "Venue".seeking_talent AS "Venue_seeking_talent", "Venue".seeking_description AS "Venue_seeking_description" 
+FROM "Venue" GROUP BY "Venue".id, "Venue".state, "Venue".city]
+(Background on this error at: http://sqlalche.me/e/f405)
+2020-05-03 19:44:40,109 ERROR: Exception on /artists [GET] [in c:\program files (x86)\python38-32\lib\site-packages\flask\app.py:1890]
+Traceback (most recent call last):
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1245, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\default.py", line 581, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UndefinedTable: FEHLER:  Relation 틻rtist� existiert nicht
+LINE 2: FROM "Artist"
+             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\johan\Desktop\starter_code\app.py", line 431, in artists
+    data = db.session.query(Artist).all()
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 3211, in all
+    return list(self)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 3367, in __iter__
+    return self._execute_and_instances(context)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 3392, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 982, in execute
+    return meth(self, multiparams, params)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\sql\elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1095, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1249, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1476, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\util\compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\util\compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1245, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\default.py", line 581, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedTable) FEHLER:  Relation 틻rtist� existiert nicht
+LINE 2: FROM "Artist"
+             ^
+
+[SQL: SELECT "Artist".id AS "Artist_id", "Artist".name AS "Artist_name", "Artist".city AS "Artist_city", "Artist".state AS "Artist_state", "Artist".phone AS "Artist_phone", "Artist".genres AS "Artist_genres", "Artist".image_link AS "Artist_image_link", "Artist".website_link AS "Artist_website_link", "Artist".facebook_link AS "Artist_facebook_link", "Artist".seeking_venue AS "Artist_seeking_venue", "Artist".seeking_description AS "Artist_seeking_description" 
+FROM "Artist"]
+(Background on this error at: http://sqlalche.me/e/f405)
+2020-05-03 19:48:44,401 INFO: errors [in C:\Users\johan\Desktop\starter_code\app.py:891]
+2020-05-03 19:48:50,534 ERROR: Exception on /venues [GET] [in c:\program files (x86)\python38-32\lib\site-packages\flask\app.py:1890]
+Traceback (most recent call last):
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1245, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\default.py", line 581, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UndefinedColumn: FEHLER:  Spalte venue.id existiert nicht
+LINE 1: SELECT venue.id AS venue_id, venue.name AS venue_name, venue...
+               ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\johan\Desktop\starter_code\app.py", line 175, in venues
+    areas = Venue.query.group_by(Venue.id, Venue.state, Venue.city).all()
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 3211, in all
+    return list(self)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 3367, in __iter__
+    return self._execute_and_instances(context)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 3392, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 982, in execute
+    return meth(self, multiparams, params)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\sql\elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1095, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1249, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1476, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\util\compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\util\compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1245, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\default.py", line 581, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedColumn) FEHLER:  Spalte venue.id existiert nicht
+LINE 1: SELECT venue.id AS venue_id, venue.name AS venue_name, venue...
+               ^
+
+[SQL: SELECT venue.id AS venue_id, venue.name AS venue_name, venue.genres AS venue_genres, venue.city AS venue_city, venue.state AS venue_state, venue.address AS venue_address, venue.phone AS venue_phone, venue.image_link AS venue_image_link, venue.website AS venue_website, venue.facebook_link AS venue_facebook_link, venue.seeking_talent AS venue_seeking_talent, venue.seeking_description AS venue_seeking_description 
+FROM venue GROUP BY venue.id, venue.state, venue.city]
+(Background on this error at: http://sqlalche.me/e/f405)
+2020-05-03 19:50:35,435 ERROR: Exception on /venues [GET] [in c:\program files (x86)\python38-32\lib\site-packages\flask\app.py:1890]
+Traceback (most recent call last):
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1245, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\default.py", line 581, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UndefinedColumn: FEHLER:  Spalte venue.id existiert nicht
+LINE 1: SELECT venue.id AS venue_id, venue.name AS venue_name, venue...
+               ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\johan\Desktop\starter_code\app.py", line 175, in venues
+    areas = Venue.query.group_by(Venue.id, Venue.state, Venue.city).all()
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 3211, in all
+    return list(self)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 3367, in __iter__
+    return self._execute_and_instances(context)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 3392, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 982, in execute
+    return meth(self, multiparams, params)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\sql\elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1095, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1249, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1476, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\util\compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\util\compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1245, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\default.py", line 581, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedColumn) FEHLER:  Spalte venue.id existiert nicht
+LINE 1: SELECT venue.id AS venue_id, venue.name AS venue_name, venue...
+               ^
+
+[SQL: SELECT venue.id AS venue_id, venue.name AS venue_name, venue.genres AS venue_genres, venue.city AS venue_city, venue.state AS venue_state, venue.address AS venue_address, venue.phone AS venue_phone, venue.image_link AS venue_image_link, venue.website AS venue_website, venue.facebook_link AS venue_facebook_link, venue.seeking_talent AS venue_seeking_talent, venue.seeking_description AS venue_seeking_description 
+FROM venue GROUP BY venue.id, venue.state, venue.city]
+(Background on this error at: http://sqlalche.me/e/f405)
+2020-05-03 19:50:38,669 ERROR: Exception on /shows [GET] [in c:\program files (x86)\python38-32\lib\site-packages\flask\app.py:1890]
+Traceback (most recent call last):
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\johan\Desktop\starter_code\app.py", line 781, in shows
+    shows_query = db.session.query(Show).join(Artist).join(Venue).all()
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 2263, in join
+    return self._join(
+  File "<string>", line 2, in _join
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\base.py", line 220, in generate
+    fn(self, *args[1:], **kw)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 2446, in _join
+    self._join_left_to_right(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 2470, in _join_left_to_right
+    ) = self._join_determine_implicit_left_side(left, right, onclause)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 2609, in _join_determine_implicit_left_side
+    raise sa_exc.InvalidRequestError(
+sqlalchemy.exc.InvalidRequestError: Don't know how to join to <class 'app.Artist'>; please use an ON clause to more clearly establish the left side of this join
+2020-05-03 19:50:39,569 ERROR: Exception on /artists [GET] [in c:\program files (x86)\python38-32\lib\site-packages\flask\app.py:1890]
+Traceback (most recent call last):
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1245, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\default.py", line 581, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UndefinedTable: FEHLER:  Relation 틻rtist� existiert nicht
+LINE 2: FROM "Artist"
+             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\johan\Desktop\starter_code\app.py", line 431, in artists
+    data = db.session.query(Artist).all()
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 3211, in all
+    return list(self)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 3367, in __iter__
+    return self._execute_and_instances(context)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 3392, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 982, in execute
+    return meth(self, multiparams, params)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\sql\elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1095, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1249, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1476, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\util\compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\util\compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1245, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\default.py", line 581, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedTable) FEHLER:  Relation 틻rtist� existiert nicht
+LINE 2: FROM "Artist"
+             ^
+
+[SQL: SELECT "Artist".id AS "Artist_id", "Artist".name AS "Artist_name", "Artist".city AS "Artist_city", "Artist".state AS "Artist_state", "Artist".phone AS "Artist_phone", "Artist".genres AS "Artist_genres", "Artist".image_link AS "Artist_image_link", "Artist".website_link AS "Artist_website_link", "Artist".facebook_link AS "Artist_facebook_link", "Artist".seeking_venue AS "Artist_seeking_venue", "Artist".seeking_description AS "Artist_seeking_description" 
+FROM "Artist"]
+(Background on this error at: http://sqlalche.me/e/f405)
+2020-05-03 19:50:40,798 ERROR: Exception on /venues [GET] [in c:\program files (x86)\python38-32\lib\site-packages\flask\app.py:1890]
+Traceback (most recent call last):
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1245, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\default.py", line 581, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UndefinedColumn: FEHLER:  Spalte venue.id existiert nicht
+LINE 1: SELECT venue.id AS venue_id, venue.name AS venue_name, venue...
+               ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\johan\Desktop\starter_code\app.py", line 175, in venues
+    areas = Venue.query.group_by(Venue.id, Venue.state, Venue.city).all()
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 3211, in all
+    return list(self)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 3367, in __iter__
+    return self._execute_and_instances(context)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 3392, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 982, in execute
+    return meth(self, multiparams, params)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\sql\elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1095, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1249, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1476, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\util\compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\util\compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1245, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\default.py", line 581, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedColumn) FEHLER:  Spalte venue.id existiert nicht
+LINE 1: SELECT venue.id AS venue_id, venue.name AS venue_name, venue...
+               ^
+
+[SQL: SELECT venue.id AS venue_id, venue.name AS venue_name, venue.genres AS venue_genres, venue.city AS venue_city, venue.state AS venue_state, venue.address AS venue_address, venue.phone AS venue_phone, venue.image_link AS venue_image_link, venue.website AS venue_website, venue.facebook_link AS venue_facebook_link, venue.seeking_talent AS venue_seeking_talent, venue.seeking_description AS venue_seeking_description 
+FROM venue GROUP BY venue.id, venue.state, venue.city]
+(Background on this error at: http://sqlalche.me/e/f405)
+2020-05-03 20:09:54,737 ERROR: Exception on /venues [GET] [in c:\program files (x86)\python38-32\lib\site-packages\flask\app.py:1890]
+Traceback (most recent call last):
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1245, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\default.py", line 581, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UndefinedColumn: FEHLER:  Spalte venue.id existiert nicht
+LINE 1: SELECT venue.id AS venue_id, venue.name AS venue_name, venue...
+               ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\johan\Desktop\starter_code\app.py", line 175, in venues
+    venue_data = []
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 3211, in all
+    return list(self)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 3367, in __iter__
+    return self._execute_and_instances(context)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 3392, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 982, in execute
+    return meth(self, multiparams, params)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\sql\elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1095, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1249, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1476, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\util\compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\util\compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1245, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\default.py", line 581, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedColumn) FEHLER:  Spalte venue.id existiert nicht
+LINE 1: SELECT venue.id AS venue_id, venue.name AS venue_name, venue...
+               ^
+
+[SQL: SELECT venue.id AS venue_id, venue.name AS venue_name, venue.genres AS venue_genres, venue.city AS venue_city, venue.state AS venue_state, venue.address AS venue_address, venue.phone AS venue_phone, venue.image_link AS venue_image_link, venue.website AS venue_website, venue.facebook_link AS venue_facebook_link, venue.seeking_talent AS venue_seeking_talent, venue.seeking_description AS venue_seeking_description 
+FROM venue GROUP BY venue.id, venue.state, venue.city]
+(Background on this error at: http://sqlalche.me/e/f405)
+2020-05-03 20:09:58,949 ERROR: Exception on /venues [GET] [in c:\program files (x86)\python38-32\lib\site-packages\flask\app.py:1890]
+Traceback (most recent call last):
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1245, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\default.py", line 581, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UndefinedColumn: FEHLER:  Spalte venue.id existiert nicht
+LINE 1: SELECT venue.id AS venue_id, venue.name AS venue_name, venue...
+               ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\johan\Desktop\starter_code\app.py", line 175, in venues
+    venue_data = []
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 3211, in all
+    return list(self)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 3367, in __iter__
+    return self._execute_and_instances(context)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 3392, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 982, in execute
+    return meth(self, multiparams, params)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\sql\elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1095, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1249, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1476, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\util\compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\util\compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1245, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\default.py", line 581, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedColumn) FEHLER:  Spalte venue.id existiert nicht
+LINE 1: SELECT venue.id AS venue_id, venue.name AS venue_name, venue...
+               ^
+
+[SQL: SELECT venue.id AS venue_id, venue.name AS venue_name, venue.genres AS venue_genres, venue.city AS venue_city, venue.state AS venue_state, venue.address AS venue_address, venue.phone AS venue_phone, venue.image_link AS venue_image_link, venue.website AS venue_website, venue.facebook_link AS venue_facebook_link, venue.seeking_talent AS venue_seeking_talent, venue.seeking_description AS venue_seeking_description 
+FROM venue GROUP BY venue.id, venue.state, venue.city]
+(Background on this error at: http://sqlalche.me/e/f405)
+2020-05-03 20:10:52,340 ERROR: Exception on /venues [GET] [in c:\program files (x86)\python38-32\lib\site-packages\flask\app.py:1890]
+Traceback (most recent call last):
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1245, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\default.py", line 581, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UndefinedColumn: FEHLER:  Spalte venue.id existiert nicht
+LINE 1: SELECT venue.id AS venue_id, venue.name AS venue_name, venue...
+               ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\johan\Desktop\starter_code\app.py", line 175, in venues
+    venue_data = []
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 3211, in all
+    return list(self)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 3367, in __iter__
+    return self._execute_and_instances(context)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 3392, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 982, in execute
+    return meth(self, multiparams, params)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\sql\elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1095, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1249, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1476, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\util\compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\util\compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1245, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\default.py", line 581, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedColumn) FEHLER:  Spalte venue.id existiert nicht
+LINE 1: SELECT venue.id AS venue_id, venue.name AS venue_name, venue...
+               ^
+
+[SQL: SELECT venue.id AS venue_id, venue.name AS venue_name, venue.genres AS venue_genres, venue.city AS venue_city, venue.state AS venue_state, venue.address AS venue_address, venue.phone AS venue_phone, venue.image_link AS venue_image_link, venue.website AS venue_website, venue.facebook_link AS venue_facebook_link, venue.seeking_talent AS venue_seeking_talent, venue.seeking_description AS venue_seeking_description 
+FROM venue GROUP BY venue.id, venue.state, venue.city]
+(Background on this error at: http://sqlalche.me/e/f405)
+2020-05-03 20:10:55,662 ERROR: Exception on /venues [GET] [in c:\program files (x86)\python38-32\lib\site-packages\flask\app.py:1890]
+Traceback (most recent call last):
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1245, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\default.py", line 581, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UndefinedColumn: FEHLER:  Spalte venue.id existiert nicht
+LINE 1: SELECT venue.id AS venue_id, venue.name AS venue_name, venue...
+               ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\johan\Desktop\starter_code\app.py", line 175, in venues
+    venue_data = []
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 3211, in all
+    return list(self)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 3367, in __iter__
+    return self._execute_and_instances(context)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 3392, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 982, in execute
+    return meth(self, multiparams, params)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\sql\elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1095, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1249, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1476, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\util\compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\util\compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1245, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\default.py", line 581, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedColumn) FEHLER:  Spalte venue.id existiert nicht
+LINE 1: SELECT venue.id AS venue_id, venue.name AS venue_name, venue...
+               ^
+
+[SQL: SELECT venue.id AS venue_id, venue.name AS venue_name, venue.genres AS venue_genres, venue.city AS venue_city, venue.state AS venue_state, venue.address AS venue_address, venue.phone AS venue_phone, venue.image_link AS venue_image_link, venue.website AS venue_website, venue.facebook_link AS venue_facebook_link, venue.seeking_talent AS venue_seeking_talent, venue.seeking_description AS venue_seeking_description 
+FROM venue GROUP BY venue.id, venue.state, venue.city]
+(Background on this error at: http://sqlalche.me/e/f405)
+2020-05-03 20:11:10,449 ERROR: Exception on /venues [GET] [in c:\program files (x86)\python38-32\lib\site-packages\flask\app.py:1890]
+Traceback (most recent call last):
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1245, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\default.py", line 581, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UndefinedColumn: FEHLER:  Spalte venue.id existiert nicht
+LINE 1: SELECT venue.id AS venue_id, venue.name AS venue_name, venue...
+               ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\johan\Desktop\starter_code\app.py", line 175, in venues
+    venue_data = []
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 3211, in all
+    return list(self)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 3367, in __iter__
+    return self._execute_and_instances(context)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 3392, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 982, in execute
+    return meth(self, multiparams, params)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\sql\elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1095, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1249, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1476, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\util\compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\util\compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1245, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\default.py", line 581, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedColumn) FEHLER:  Spalte venue.id existiert nicht
+LINE 1: SELECT venue.id AS venue_id, venue.name AS venue_name, venue...
+               ^
+
+[SQL: SELECT venue.id AS venue_id, venue.name AS venue_name, venue.genres AS venue_genres, venue.city AS venue_city, venue.state AS venue_state, venue.address AS venue_address, venue.phone AS venue_phone, venue.image_link AS venue_image_link, venue.website AS venue_website, venue.facebook_link AS venue_facebook_link, venue.seeking_talent AS venue_seeking_talent, venue.seeking_description AS venue_seeking_description 
+FROM venue GROUP BY venue.id, venue.state, venue.city]
+(Background on this error at: http://sqlalche.me/e/f405)
+2020-05-03 20:13:33,764 ERROR: Exception on /venues [GET] [in c:\program files (x86)\python38-32\lib\site-packages\flask\app.py:1890]
+Traceback (most recent call last):
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1245, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\default.py", line 581, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UndefinedColumn: FEHLER:  Spalte venue.id existiert nicht
+LINE 1: SELECT venue.id AS venue_id, venue.name AS venue_name, venue...
+               ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\johan\Desktop\starter_code\app.py", line 175, in venues
+    venue_data = []
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 3211, in all
+    return list(self)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 3367, in __iter__
+    return self._execute_and_instances(context)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 3392, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 982, in execute
+    return meth(self, multiparams, params)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\sql\elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1095, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1249, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1476, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\util\compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\util\compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1245, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\default.py", line 581, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedColumn) FEHLER:  Spalte venue.id existiert nicht
+LINE 1: SELECT venue.id AS venue_id, venue.name AS venue_name, venue...
+               ^
+
+[SQL: SELECT venue.id AS venue_id, venue.name AS venue_name, venue.genres AS venue_genres, venue.city AS venue_city, venue.state AS venue_state, venue.address AS venue_address, venue.phone AS venue_phone, venue.image_link AS venue_image_link, venue.website AS venue_website, venue.facebook_link AS venue_facebook_link, venue.seeking_talent AS venue_seeking_talent, venue.seeking_description AS venue_seeking_description 
+FROM venue GROUP BY venue.id, venue.state, venue.city]
+(Background on this error at: http://sqlalche.me/e/f405)
+2020-05-03 20:18:16,435 ERROR: Exception on /venues [GET] [in c:\program files (x86)\python38-32\lib\site-packages\flask\app.py:1890]
+Traceback (most recent call last):
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1245, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\default.py", line 581, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UndefinedColumn: FEHLER:  Spalte venue.id existiert nicht
+LINE 1: SELECT venue.id AS venue_id, venue.name AS venue_name, venue...
+               ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\program files (x86)\python38-32\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\johan\Desktop\starter_code\app.py", line 175, in venues
+    venue_data = []
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 3211, in all
+    return list(self)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 3367, in __iter__
+    return self._execute_and_instances(context)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\orm\query.py", line 3392, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 982, in execute
+    return meth(self, multiparams, params)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\sql\elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1095, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1249, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1476, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\util\compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\util\compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\base.py", line 1245, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\johan\AppData\Roaming\Python\Python38\site-packages\sqlalchemy\engine\default.py", line 581, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedColumn) FEHLER:  Spalte venue.id existiert nicht
+LINE 1: SELECT venue.id AS venue_id, venue.name AS venue_name, venue...
+               ^
+
+[SQL: SELECT venue.id AS venue_id, venue.name AS venue_name, venue.genres AS venue_genres, venue.city AS venue_city, venue.state AS venue_state, venue.address AS venue_address, venue.phone AS venue_phone, venue.image_link AS venue_image_link, venue.website AS venue_website, venue.facebook_link AS venue_facebook_link, venue.seeking_talent AS venue_seeking_talent, venue.seeking_description AS venue_seeking_description 
+FROM venue GROUP BY venue.id, venue.state, venue.city]
+(Background on this error at: http://sqlalche.me/e/f405)
