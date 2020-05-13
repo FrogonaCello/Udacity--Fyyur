@@ -288,8 +288,8 @@ def create_venue_submission():
             website="",
             image_link=vimage_link
         ))
-    except expression:
-        error = true
+    except Exception as expression:
+        error = True
     finally:
         if not error:
             db.session.commit()
@@ -548,8 +548,8 @@ def create_artist_submission():
         facebook_link=afacebook_link,
         seeking_venue=False,
         ))
-    except expression:
-        error = true
+    except Exception as expression:
+        error = True
     finally:
         if not error:
             db.session.commit()
@@ -574,7 +574,7 @@ def create_artist_submission():
 @app.route('/shows')
 def shows():
     
-    shows_query = db.session.query(Show).join(Artist, Artist.id == Show.venue_id).join(Venue, Venue.id == Show.venue_id).all()
+    shows_query = db.session.query(Show).join(Artist, Artist.id == Show.artist_id).join(Venue, Venue.id == Show.venue_id).all()
     
     #venue = db.session.query(Venue).get(venue.id)
     
@@ -615,8 +615,8 @@ def create_show_submission():
         venue_id=svenue_id,
         start_time = sstart_time,
         ))
-    except expression: 
-        error = true
+    except Exception as expression: 
+        error = True
     finally:
         if not error:
             db.session.commit()
