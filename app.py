@@ -106,7 +106,7 @@ class Artist(db.Model):
         self.website = website
         self.facebook_link = facebook_link
         self.seeking_venue = seeking_venue
-        self.seeking_description = seeking_decription
+        self.seeking_description = seeking_description
         
         
 
